@@ -1,0 +1,97 @@
+# V3 tabani + ek envanter etiketleri. Chunk bu listeyi degistirmez.
+
+classify_prompt: |
+  You classify ONE car inventory photo.
+  Reply with EXACTLY ONE label from this list (underscores as shown), nothing else:
+  exterior_overview, exterior_front, exterior_front_left, exterior_front_right,
+  exterior_side_left, exterior_side_right, exterior_rear, exterior_rear_left,
+  exterior_rear_right, exterior_wheel, exterior_headlight, exterior_taillight,
+  exterior_fog_light, exterior_light, exterior_badge, exterior_charging_port,
+  exterior_detail, exterior_hero, exterior_top_view, exterior_low_angle, exterior_high_angle,
+  exterior_wheel_close, exterior_tire, exterior_logo_close, exterior_mirror, exterior_door_handle,
+  exterior_roof, exterior_roof_detail, exterior_sunroof_open, exterior_doors_open,
+  exterior_front_door_open, exterior_rear_door_open,
+  engine_bay_open, engine_bay_detail, engine_cover,
+  trunk_open, trunk_lower_compartment_open, trunk_closed, trunk_detail,
+  trunk_capacity_demo, trunk_luggage_loaded,
+  interior_frontrow, interior_passenger_seat, interior_rearrow, interior_dashboard,
+  interior_screen_main, interior_screen_cluster, interior_screen_hud, interior_screen_rear,
+  interior_screen_climate, interior_controls, interior_steering_cluster, interior_seats,
+  interior_door_panel, interior_console, interior_sunroof_top, interior_mirror,
+  interior_driver_view, interior_legroom_front, interior_legroom_rear,
+  interior_navigation_screen, interior_digital_cockpit, interior_gear_selector,
+  interior_ambient_lighting, interior_stitching_detail,
+  car_key_fob, parking_camera, audio_system,
+  unclassified
+  If unclear: unclassified
+
+allowed_labels:
+  - exterior_overview
+  - exterior_front
+  - exterior_front_left
+  - exterior_front_right
+  - exterior_side_left
+  - exterior_side_right
+  - exterior_rear
+  - exterior_rear_left
+  - exterior_rear_right
+  - exterior_wheel
+  - exterior_headlight
+  - exterior_taillight
+  - exterior_fog_light
+  - exterior_light
+  - exterior_badge
+  - exterior_charging_port
+  - exterior_detail
+  - exterior_hero
+  - exterior_top_view
+  - exterior_low_angle
+  - exterior_high_angle
+  - exterior_wheel_close
+  - exterior_tire
+  - exterior_logo_close
+  - exterior_mirror
+  - exterior_door_handle
+  - exterior_roof
+  - exterior_roof_detail
+  - exterior_sunroof_open
+  - exterior_doors_open
+  - exterior_front_door_open
+  - exterior_rear_door_open
+  - engine_bay_open
+  - engine_bay_detail
+  - engine_cover
+  - trunk_open
+  - trunk_lower_compartment_open
+  - trunk_closed
+  - trunk_detail
+  - trunk_capacity_demo
+  - trunk_luggage_loaded
+  - interior_frontrow
+  - interior_passenger_seat
+  - interior_rearrow
+  - interior_dashboard
+  - interior_screen_main
+  - interior_screen_cluster
+  - interior_screen_hud
+  - interior_screen_rear
+  - interior_screen_climate
+  - interior_controls
+  - interior_steering_cluster
+  - interior_seats
+  - interior_door_panel
+  - interior_console
+  - interior_sunroof_top
+  - interior_mirror
+  - interior_driver_view
+  - interior_legroom_front
+  - interior_legroom_rear
+  - interior_navigation_screen
+  - interior_digital_cockpit
+  - interior_gear_selector
+  - interior_ambient_lighting
+  - interior_stitching_detail
+  - car_key_fob
+  - parking_camera
+  - audio_system
+  - unclassified

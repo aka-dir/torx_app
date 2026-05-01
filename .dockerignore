@@ -1,0 +1,47 @@
+.git
+.gitignore
+.dockerignore
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Vite
+node_modules/
+web/node_modules/
+dist/
+web/dist/
+.vite/
+coverage/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+apikey.txt
+apikey__.txt
+apikey_test
+apikey_test.local
+inventory-photo-kit/apikey_test
+inventory-photo-kit/apikey_test.local
+*.pem
+*.key
+*service-account*.json
+credentials*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local exports and generated artifacts
+downloads/
+exports/
+*.zip

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torxflow-backend"
+version = "0.1.0"
+description = "Local FastAPI wrapper for the inventory photo sorter."
+requires-python = ">=3.11"
+
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.32.0",
+  "python-multipart>=0.0.17",
+  "google-auth>=2.32.0",
+  "google-cloud-secret-manager>=2.20.0",
+  "google-cloud-storage>=2.18.0",
+  "google-cloud-firestore>=2.19.0",
+  "httpx>=0.27.0",
+  # NOTE: `inventory-photo-kit` is installed separately from the local
+  # `../inventory-photo-kit/` folder during setup.
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]

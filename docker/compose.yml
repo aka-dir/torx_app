@@ -1,0 +1,24 @@
+services:
+  torxflow-sorter:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: torxflow-sorter:local
+    container_name: torxflow-sorter
+    ports:
+      - "${PORT:-8076}:8076"
+    environment:
+      SKIP_AUTH: "1"
+      DEV_GARAGE_ID: "local-dev"
+      GCS_BUCKET: ""
+      GCP_PROJECT: ""
+      WEB_DIST_DIR: "/app/web/dist"
+      PORT: "8076"
+    volumes:
+      - type: bind
+        source: ../inventory-photo-kit/apikey_test
+        target: /app/inventory-photo-kit/apikey_test
+        read_only: true
+        bind:
+          create_host_path: false
+    restart: unless-stopped

@@ -1,0 +1,36 @@
+# Vision provider (currently Gemini only; wired in photosort.vision).
+provider: gemini
+model: gemini-2.5-flash
+
+image:
+  jpeg_quality: 88
+
+  scaling:
+    mode: adaptive
+    hard_cap_px: 1536
+    rules:
+      - min_long_edge: 4000
+        max_side: 1024
+      - min_long_edge: 2500
+        max_side: 896
+      - min_long_edge: 0
+        max_side: 768
+
+  # Fixed cap instead of adaptive rules:
+  # scaling:
+  #   mode: fixed
+  #   max_side_px: 896
+
+timing:
+  gap_seconds: 4
+  max_retries: 6
+
+generation:
+  max_output_tokens: 256
+
+# Optional: pHash duplicate groups — one Gemini call per cluster, same label for siblings.
+# max_hamming = max Hamming distance between perceptual hashes to treat as same cluster (stricter = lower).
+# Typical near-duplicates (burst/bracket) cluster at ≤6; different angles often do NOT — that is expected.
+dedupe:
+  enabled: false
+  max_hamming: 6
